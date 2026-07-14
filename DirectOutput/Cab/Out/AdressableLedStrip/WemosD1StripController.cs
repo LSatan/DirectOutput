@@ -430,8 +430,8 @@ namespace DirectOutput.Cab.Out.AdressableLedStrip
                 Log.Write($"[DOF Critical] Hardware transmission pipe crashed ({E.Message}). Starting automated hot-plug recovery...");
 
                 bool reconnectionSuccessful = false;
-                int maxAttempts = 5;
-                int delayBetweenAttemptsMs = 3000; // 3 seconds evaluation pause per retry = 15s total structural window
+                int maxAttempts = 15;
+                int delayBetweenAttemptsMs = 1000; // 1 second evaluation pause per retry = 15s total structural window
 
                 for (int attempt = 1; attempt <= maxAttempts; attempt++)
                 {
